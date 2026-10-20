@@ -1,17 +1,14 @@
 # GPU-CPU-GPGPUs-Spec
-Spec collection for different GPUs, CPUs, GPGPUs. Simplicity, long story in short.
 
-### Roofline, Computational intensity, FLOPs, Memory Bound,
+Roofline, Computational intensity, FLOPs, Memory Bound,
 
-# Finding Computational Intensity for a Specific Chip
+### Finding Computational Intensity for a Specific Chip
 
-**Short answer: you usually can't look up "computational intensity" as a chip spec — it's a property of the *kernel/workload*, not the chip.** What you *can* find per-chip is the two quantities that define the machine's **ridge point** (the minimum arithmetic intensity needed to be compute-bound):
+Short answer: you usually can't look up "computational intensity" as a chip spec — it's a property of the *kernel/workload*, not the chip.** What you *can* find per-chip is the two quantities that define the machine's **ridge point** (the minimum arithmetic intensity needed to be compute-bound):
 
 $$I_{\text{ridge}} = \frac{\text{Peak FLOPS}}{\text{Peak Memory Bandwidth}} \quad [\text{FLOP/byte}]$$
 
 That's the closest standard per-chip number to what you're describing.
-
-## Where to find the two ingredients
 
 ### 1. Peak FLOPS
 
